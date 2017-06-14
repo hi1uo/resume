@@ -1,0 +1,358 @@
+/**{
+  outline: 1px solid red;
+}*/
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+/*@media only screen and (min-width: 900px){
+  .container{
+    width: 900px;
+    margin-left:auto;
+    margin-right: auto;
+  }
+}*/
+
+#demo0,
+#demo1,
+#demo2,
+#demo3,
+#demo4,
+#demo5{
+  max-width: 300px;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+
+body,
+div,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding:0;
+  margin:0;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.clear-fix {
+  overflow: auto;
+}
+
+h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 40px;
+  color: #f5a623;
+  line-height: 48px;
+  display: inline;
+}
+
+h2 {
+  /*font-weight: bold;*/
+  /*font-size: 36px;*/
+  color: grey;
+  line-height: 29px;
+  padding: 10px;
+  width:100%;
+}
+
+h3 {
+  font-size: 20px;
+  color: #000;
+  line-height: 22px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 18px;
+  color: orange;
+  line-height: 17px;
+  font-family: 'Source Sans Pro', sans-serif;
+  /*padding-bottom: 10px;*/
+}
+
+h2,
+h3,
+h5 {
+  padding:10px 5%;
+
+}
+
+footer {
+  background-color: #29282c;
+  min-height: 50px;
+}
+
+.date-text {
+  /*font-style: italic;*/
+  font-size: 16px;
+  color: #999;
+  line-height: 16px;
+}
+
+.location-text {
+  /*font-style: italic;*/
+  font-size: 16px;
+  color: #999;
+  line-height: 16px;
+
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+  line-height: 21px;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #1199c3;
+  text-decoration: none;
+  margin-top: 5px;
+  display: block;
+}
+
+#name{
+  font-size: 80px;
+  font-style: normal;
+}
+
+.front-page-1,
+.front-page-2,
+.front-page-3,
+.front-page-4,
+.front-page-5
+{
+  width: 100%;
+  min-height: 500px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.front-page-1{
+  background-color: #e6e6e6;
+}
+
+.front-page-2{
+  background-color: white;
+}
+
+.front-page-3{
+  background-color: #e6f5ff;
+}
+
+.front-page-4{
+  background-color:#f5a623;
+}
+
+.bio{
+  text-align: center;
+  margin-top: 300px;
+  color: #f5a623;
+}
+
+.textcenter{
+  text-align: center;
+}
+
+#topContacts{
+  margin-top: 50px;
+}
+
+#aboutme{
+  margin: auto 5%;
+}
+
+.welcome-message {
+  color: #f3f3f3;
+  line-height: 28px;
+}
+
+#skills-h3 {
+  color: #f5ae23;
+  display: none;
+}
+
+.orange {
+  background-color: #f5ae23;
+}
+
+.orange-text {
+  color: #f5ae23;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.gray-text{
+  color:#69676a;
+}
+
+.gray {
+  background-color: #f3f3f3;
+  padding-bottom: 10px;
+  clear:both;
+}
+
+.dark-gray {
+  background-color: #4a4a4a;
+}
+
+/* TODO: Replace with image later */
+#header {
+  background-color: #29282c;
+}
+
+.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.center-content {
+  padding: 5% 5%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.biopic {
+  float: left;
+  padding: 10px;
+  width: 200px;
+  display: none;
+}
+.schoologo,
+.worklogo {
+  /*margin: 10px;*/
+  width: 180px;
+}
+
+.schoologo{
+  margin: auto;
+}
+
+.aboutme-entry,
+.education-entry,
+.work-entry,
+.project-entry {
+  padding: 40px;
+}
+
+.box3,
+.box2{
+  padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .schoologo,
+  .worklogo {
+    width: 150px;
+  }
+
+  #name{
+    font-size: 60px;
+  }
+  #role{
+    font-size: 26px;
+  }
+  .col-xs-2{
+    width: 25%
+  }
+
+  #demo0,
+  #demo1,
+  #demo2,
+  #demo3,
+  #demo4,
+  #demo5{
+    width: 150px;
+  }
+
+}
+
+img {
+  padding: 0px;
+  max-width: 100%;
+}
+
+span {
+  padding: 5px;
+}
+
+#lets-connect {
+  text-align: center;
+}
+
+/* Media queries to handle various device widths */
+
+@media only screen and (max-width: 1024px) {
+  #lets-connect {
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (max-width:900px) {
+  .biopic {
+    width: 175px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #lets-connect {
+    margin-top: 10%;
+  }
+  .biopic {
+    width: 150px;
+  }
+  .welcome-message {
+    display: none;
+  }
+}
+
+#map {
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+}
+
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: "FontAwesome", sans-serif;
+  font-size: 16px;
+  color: white;
+  margin-right:1.5em;
+}
+
+
+@media only screen and (min-width: 750px) {
+  #skills-h3,
+  .biopic {
+    display: block;
+  }
+}

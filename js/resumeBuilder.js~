@@ -1,0 +1,178 @@
+
+/********************************bio********************************/
+var bio = {
+  "name" : "Jerry Luo",
+  "role" : "WEB DEVELOPER",
+  "contacts" : {
+    "mobile": "469-213-9932",
+    "email": "jerryluo1989@gmail.com",
+    "location": "Dallas, Tx"
+  },
+  "biopic" : "images/Self.jpg",
+  "welcomeMsg" : "Hello!",
+  "skills" : ["WEB DEVELOPMENT","JavaScript","Photography"],
+  "aboutme":[
+    "Highly motivated MS engineering graduate, with knowledge of Java programing and mobile development.",
+    "Fast learner. Good interpersonal communication skill. Excellent teamwork."
+  ]
+}
+
+/***********************bio display function************************/
+displaybio();
+function displaybio(){
+  var formattedName = HTMLheaderName.replace("%data%",bio.name);
+  var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
+  var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
+  var formattedEmail = HTMLemail.replace("%data%",bio.contacts.email);
+  var formattedGithub = HTMLgithub.replace("%data%",bio.contacts.github);
+  var formattedLocation = HTMLlocation.replace("%data%",bio.contacts.location);
+  var formattedWelcome = HTMLwelcomeMsg.replace("%data%",bio.welcomeMsg);
+
+  $("#header").prepend(formattedName);
+  $(".bio").append(formattedRole);
+  // $("#header").prepend(formattedWelcome);
+
+  $("#topContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedLocation);
+}
+
+// //show skills
+// if(bio.skills.length>0){
+//   $("#header").append(HTMLskillsStart);
+//   var i = bio.skills.length - 1;
+//   while (bio.skills[i]!= null){
+//     formattedSkill = HTMLskills.replace("%data%",bio.skills[i]);
+//     $("#skills").append(formattedSkill);
+//     i--;
+//   }
+// }
+
+
+/********************************education********************************/
+var education = {
+  "schools": [
+    {
+      "name": "The University of Texas at Dallas",
+      "location": "Richardson, Tx",
+      "degree": "Master of Science",
+      "major": "Electrical Engineering",
+      "dates": "2012-2014",
+      "url": "images/utd1.png"
+    },
+    {
+      "name": "Chongqing University",
+      "location": "Chongqing, China",
+      "degree": "Bachelor of Science",
+      "major": "Automation",
+      "dates": "2008-2012",
+      "url": "images/cqu.png"
+    }
+  ],
+  "onlineCourses":
+    {
+      "title": "Front-End Developer Nanodegree",
+      "school": "Udacity.com",
+      "dates": "2016-present",
+      "url": "images/Udacity_logo.png"
+    }
+};
+
+/**************************DISPLAY EDUCATION**************************/
+
+displayeucation();
+function displayeucation(){
+  $("#education").append(HTMLschoolStart);
+  $("#education").append("<div class='col-4 school0'></div>");
+  $("#education").append("<div class='col-4 school1'></div>");
+  $("#education").append("<div class='col-4 school2'></div>");
+  var formattedName0 = HTMLschoolName.replace("%data%",education.schools[0].name);
+  var formattedLocation0 = HTMLschoolLocation.replace("%data%",education.schools[0].location);
+  var formattedDegree0 = HTMLschoolDegree.replace("%data%",education.schools[0].degree);
+  var formattedMajor0 = HTMLschoolMajor.replace("%data%",education.schools[0].major);
+  var formattedDates0 = HTMLschoolDates.replace("%data%",education.schools[0].dates);
+
+  var formattedName1 = HTMLschoolName.replace("%data%",education.schools[0].name);
+  var formattedLocation1 = HTMLschoolLocation.replace("%data%",education.schools[0].location);
+  var formattedDegree1 = HTMLschoolDegree.replace("%data%",education.schools[0].degree);
+  var formattedMajor1 = HTMLschoolMajor.replace("%data%",education.schools[0].major);
+  var formattedDates1 = HTMLschoolDates.replace("%data%",education.schools[0].dates);
+
+  var formattedName2 = HTMLschoolName.replace("%data%",education.schools[0].name);
+  var formattedLocation2 = HTMLschoolLocation.replace("%data%",education.schools[0].location);
+  var formattedDegree2 = HTMLschoolDegree.replace("%data%",education.schools[0].degree);
+  var formattedMajor2 = HTMLschoolMajor.replace("%data%",education.schools[0].major);
+  var formattedDates2 = HTMLschoolDates.replace("%data%",education.schools[0].dates);
+  var formattedLogo0 = HTMLschoolLogo.replace("%data%",education.schools[0].url);
+  var formattedLogo1 = HTMLschoolLogo.replace("%data%",education.schools[1].url);
+  var formattedLogo2 = HTMLschoolLogo.replace("%data%",education.onlineCourses.url);
+  $(".school0").append(formattedLogo0,formattedName0,formattedLocation0,formattedDegree0,formattedMajor0,formattedDates0);
+  $(".school0").append(formattedLogo1,formattedName1,formattedLocation1,formattedDegree1,formattedMajor1,formattedDates1);
+  // $(".school0").append(formattedLogo2,formattedName2,formattedLocation2,formattedDegree2,formattedMajor2,formattedDates2);
+
+}
+
+/********************************work********************************/
+var work = {}; //Make sure variable name "=" object
+work.position = "Filed Application Enigneer";
+work.employer = "Enseo, Inc.";
+work.dates = "2014-present";
+work.location = "Richardson, Tx";
+work.description = "Successfully directing installations of Enseo's in-room entertainment system for the world’s largest hotel groups including Marriott and Hilton.Coordinating plans, scheduling and technical support of over 30 hotels with 6,700+ guest rooms.Professionally communicating to Project Manger and Engineers on technical specifications."
+
+
+/************************WORK display function************************/
+displaywork();
+function displaywork(){
+  $("#workExperience").append(HTMLworkStart);
+  $("#workExperience").append("<div class='col-3 workleft'></div>");
+  $("#workExperience").append("<div class='col-9 workright'></div>");
+  var formattedEmployer = HTMLworkEmployer.replace("%data%",work.employer);
+  var formattedTitle = HTMLworkTitle.replace("%data%",work.position);
+  var formattedDate = HTMLworkDates.replace("%data%",work.dates);
+  var formattedLogo = HTMLworkLogo.replace("%data%","images/worklogo.png");
+  $(".workleft").append(formattedLogo);
+  $(".workleft").append(formattedEmployer);
+  $(".workright").append(formattedTitle, formattedDate);
+  var formattedDescription = HTMLworkDescription.replace("%data%",work.description);
+  $(".workright").append(formattedDescription);
+}
+
+/******************************** proj ********************************/
+var projects = {
+  "portfolio":
+    {
+      "title": "Building a personal Profolio",
+      "description": "Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.",
+      "show": "postes to github.io",
+      "dates": "Mar.2016"
+    }
+}
+
+/************************PROJ display function************************/
+projects.display = function() {
+  $("#projects").append(HTMLprojectStart);
+  var formattedTitle = HTMLprojectTitle.replace("%data%", projects.portfolio.title);
+  var formattedTime = HTMLprojectDates.replace("%data%", projects.portfolio.dates);
+  var formattedDescription = HTMLprojectDescription.replace("%data%",projects.portfolio.description);
+  var formattedImg = HTMLprojectImage.replace("%data%","images/197x148.gif");
+  $(".project-entry:last").append(formattedTitle, formattedTime, formattedDescription, formattedImg);
+}
+ projects.display();
+//
+//internationalized name
+function inName(name){
+  name = name.trim().split(" ");
+  console.log(name);
+  name[1] = name[1].toUpperCase();
+  name[0] = name[0].slice(0,1).toUpperCase()+name[0].slice(1).toLowerCase();
+  return (name[1] + " " + name[0]);
+}
+// show the button on the screen. How to show the result, see helper.css, $name.html(iName);
+$("#main").append(internationalizeButton);
+
+//
+// /*
+// The resume includes an interactive map. Do the following to add it.
+// In resumeBuilder.js, append the googleMap string to <div id=”mapDiv”>.
+// In index.html, uncomment the Google script element: <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+// In helper.js, at the bottom of the file, uncomment code to initialize map and set fitBounds.
+// */

@@ -10,7 +10,7 @@ var bio = {
   },
   "biopic" : "images/Self.jpg",
   "welcomeMessage" : "Hello!",
-  "skills" : ["HTML","CSS","jQuery","javascript","Python","Java"],
+  "skills" : ["Python", "javascript", "HTML", "CSS", "jQuery", "Java"],
   "aboutme": "Highly motivated MS engineering graduate, with knowledge of Object Oriented Programing and WEB development. Fast learner. Good interpersonal communication skill. Excellent teamwork."
 };
 

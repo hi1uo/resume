@@ -154,68 +154,57 @@ work.display();
 
 
 /******************************** PROJ ********************************/
-var projects = {
-  "projects":
+var projects =
   [
     {
       "title": "Personal Profolio",
       "description": "Developed a personal portfolio page",
       "show": "postes to github.io",
-      "dates": "Mar.2016",
-      "images":["images/Hello-md.jpg"]
-    }]
-};
+      "dates": "2016",
+      "link": "http://jerryluo1989.github.io/portfolio",
+      "image":"images/Hello-md.jpg"
+    },
+    {
+      "title": "Arcade Game",
+      "description": "Arcade Game",
+      "show": "postes to github.io",
+      "dates": "2016",
+      "link": "https://hi1uo.github.io/froger_game/",
+      "image":"images/game.png"
+    },
+    {
+      "title": "Neighborhood Map",
+      "description": "Neighborhood Map",
+      "show": "postes to github.io",
+      "dates": "2016",
+      "link": "https://hi1uo.github.io/Dallas_Best_Coffee_shops/dist/index.html",
+      "image":"images/map-md.png"
+    },
+    {
+      "title": "More Projects",
+      "description": "More Projects to come, such as ProjectX",
+      "show": "postes to github.io",
+      "dates": "2017",
+      "link": "#",
+      "image":"images/getting-stuff-done-md.png"
+    }
+  ];
 
 //PROJ display
 projects.display = function() {
   $("#projects").append(HTMLprojectStart);
 
-  projects.projects.forEach(function(project,index){
+  projects.forEach(function(project,index){
     var projid = "proj"+""+index;
-    var formattedTitle = HTMLprojectTitle.replace("#","http://jerryluo1989.github.io/portfolio").replace("%data%", project.title);
+    var formattedTitle = HTMLprojectTitle.replace("#",project.link).replace("%data%", project.title);
     var formattedTime = HTMLprojectDates.replace("%data%", project.dates);
     var formattedDescription = HTMLprojectDescription.replace("%data%",project.description);
-    var formattedImg = HTMLprojectImage.replace("%data%",project.images[index]);
+    var formattedImg = HTMLprojectImage.replace("%data%",project.image);
     var el = $("<div class='col-sm-3'></div>").addClass(projid).append(formattedImg, formattedTitle, formattedTime);
     $(".project-entry:last").append(el);
   });
-
-//upcoming projects, not done yet
-  var formattedTitle1 = HTMLprojectTitle.replace("%data%", "Acrade Game");
-  var formattedTitle2 = HTMLprojectTitle.replace("%data%", "Neighborhood Map");
-  var formattedTitle3 = HTMLprojectTitle.replace("%data%", "More Projects");
-  var formattedImg1 = HTMLprojectImage.replace("%data%","images/game.png");
-  var formattedImg2 = HTMLprojectImage.replace("%data%","images/map-md.png");
-  var formattedImg3 = HTMLprojectImage.replace("%data%","images/getting-stuff-done-md.png");
-  $(".project-entry:last").append("<div class='col-sm-3 proj1'></div>");
-  $(".project-entry:last").append("<div class='col-sm-3 proj2'></div>");
-  $(".project-entry:last").append("<div class='col-sm-3 proj3'></div>");
-  $(".proj1").append(formattedImg1,formattedTitle1,"<p>Coming Soon</p>");
-  $(".proj2").append(formattedImg2,formattedTitle2,"<p>Coming Soon</p>");
-  $(".proj3").append(formattedImg3,formattedTitle3,"<p>Coming Soon</p>");
 };
  projects.display();
 
-
-//internationalized name
-// function inName(name){
-//   name = name.trim().split(" ");
-//   console.log(name);
-//   name[1] = name[1].toUpperCase();
-//   name[0] = name[0].slice(0,1).toUpperCase()+name[0].slice(1).toLowerCase();
-//   return (name[1] + " " + name[0]);
-// }
-
-// show the button on the screen. How to show the result, see helper.css, $name.html(iName);
-// $("#main").append(internationalizeButton);
-
-// show the map
+// Display the map
 $("#mapDiv").append(googleMap);
-
-
-/*
-The resume includes an interactive map. Do the following to add it.
-In resumeBuilder.js, append the googleMap string to <div id=”mapDiv”>.
-In index.html, uncomment the Google script element: <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
-In helper.js, at the bottom of the file, uncomment code to initialize map and set fitBounds.
-*/
